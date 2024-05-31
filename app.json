@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+     
+    "pages/StockIn/StockIn",
+    "pages/CheckOut/CheckOut",   
+    "pages/profile/profile",
+    "custom-tab-bar/custom-tab-bar"
+  ],
+  "subpackages": [
+    {
+      "root": "pages/side-bar/",
+      "pages": ["side-bar", "base/index", "switch/index", "custom/index", "with-icon/index"]
+    },
+    {
+      "root": "pages/action-sheet/",
+      "pages": ["action-sheet"]
+    },
+    {
+      "root": "pages/avatar/",
+      "pages": ["avatar"]
+    },
+    {
+      "root": "pages/calendar/",
+      "pages": ["calendar"]
+    },
+    {
+      "root": "pages/dialog/",
+      "pages": ["dialog"]
+    },
+    {
+      "root": "pages/picker/",
+      "pages": ["picker"]
+    },
+    {
+      "root": "pages/rate/",
+      "pages": ["rate"]
+    },
+    {
+      "root": "pages/swiper/",
+      "pages": ["swiper"]
+    },
+    {
+      "root": "pages/swipe-cell/",
+      "pages": ["swipe-cell"]
+    },
+    {
+      "root": "pages/tree-select/",
+      "pages": ["tree-select"]
+    },
+    {
+      "root": "pages/indexes/",
+      "pages": ["indexes", "base/index", "custom/index"]
+    }
+  ],
+  "usingComponents": {
+    "tabbar": "/components/tabbar/tabbar",
+    "t-button": "tdesign-miniprogram/button/button",
+    "t-icon": "tdesign-miniprogram/icon/icon",
+    "t-input": "tdesign-miniprogram/input/input",
+    "t-message": "tdesign-miniprogram/message/message",
+    "t-tab-bar": "tdesign-miniprogram/tab-bar/tab-bar",
+    "t-tab-bar-item": "tdesign-miniprogram/tab-bar-item/tab-bar-item",
+    "t-swiper": "tdesign-miniprogram/swiper/swiper",
+    "t-image": "tdesign-miniprogram/image/image"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f6f6f6",
+    "backgroundColor": "#f6f6f6",
+    "navigationBarTitleText": "TDesign",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="image-container">
+    <image class="image" src="/Static/logo.jpg"></image>
+  </view>
+  <view class="input-container form-item">
+    <t-input
+      prefixIcon="user"
+      label="手机号"
+      placeholder="请输入手机号"
+      bindchange="handlePhoneNumberInput"
+      value="{{phoneNumber}}"
+      tips="{{phoneTips}}"
+      tipsColor="{{phoneTipsColor}}"
+    ></t-input>
+  </view>
+  <view class="input-container form-item">
+    <t-input
+      prefixIcon="lock-on"
+      label="密码"
+      type="password"
+      placeholder="请输入密码"
+      bindblur="handlePasswordInput"
+      value="{{password}}"
+      tips="{{passwordTips}}"
+      tipsColor="{{passwordTipsColor}}"
+    ></t-input>
+  </view>
+  <view class="errMSG">
+    <view class="form-item" wx:if="{{errorMsg}}">
+      <text class="warning">{{errorMsg}}</text>
+    </view>
+    <view class="form-item" wx:if="{{loginFailedCount > 0 && loginFailedCount < 5}}">
+      <text class="warning">当前剩余尝试次数: {{5 - loginFailedCount}}</text>
+    </view>
+  </view>
+  <t-button theme="primary" bindtap="handleLogin">登录</t-button>
+  <t-message id="t-message"></t-message>
+</view>

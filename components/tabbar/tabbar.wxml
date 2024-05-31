@@ -1,0 +1,8 @@
+<view class="tabbar">
+  <t-tab-bar value="{{activeTab}}" bind:change="onTabChange" fixed="true" shape="round" split="true" theme="tag">
+    <t-tab-bar-item value="home" icon="home">首页</t-tab-bar-item>
+    <t-tab-bar-item value="StockIn" icon="check-rectangle">入库确认</t-tab-bar-item>
+    <t-tab-bar-item value="CheckOut" icon="cart">终端成交</t-tab-bar-item>
+    <t-tab-bar-item value="profile" icon="user">我的</t-tab-bar-item>
+  </t-tab-bar>
+</view>

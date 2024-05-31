@@ -1,0 +1,33 @@
+<view class="container">
+  <!-- 图片轮播 -->
+  <swiper class="swiper" autoplay="true" interval="5000" circular="true">
+    <swiper-item>
+      <image src="/Static/Slide/1.png" class="slide-image"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/Static/Slide/2.png" class="slide-image"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/Static/Slide/3.png" class="slide-image"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/Static/Slide/4.png" class="slide-image"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/Static/Slide/5.png" class="slide-image"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 出入库记录 -->
+  <view class="record-section">
+    <text class="section-title">出入库记录</text>
+    <view class="record-list">
+      <view class="record-item">记录 1</view>
+      <view class="record-item">记录 2</view>
+      <view class="record-item">记录 3</view>
+    </view>
+  </view>
+
+  <!-- 底部导航栏 -->
+  <tabbar activeTab="{{activeTab}}" bind:change="onTabChange" />
+</view>

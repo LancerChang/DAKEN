@@ -1,0 +1,6 @@
+<view class="container">
+  <text>这是入库确认页面</text>
+
+  <!-- 底部导航栏 -->
+  <tabbar activeTab="{{activeTab}}" bind:change="onTabChange" />
+</view>

@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    padding-bottom: 80px; /* 确保内容不被tabbar遮挡 */
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .record-section {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .record-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .record-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* TDesign 的 tabbar 默认样式无需修改 */
+  

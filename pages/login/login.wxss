@@ -1,0 +1,53 @@
+page {
+    background-color: #ffffff; /* 设置整个页面的背景颜色为纯白色 */
+}
+
+.container {
+    padding: 20px;
+    background-color: #ffffff; /* 设置容器的背景颜色为纯白色 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 横向居中容器内的内容 */
+}
+
+.errMSG {
+    background-color: #ffffff; /* 设置容器的背景颜色为纯白色 */
+    display: flex;
+    flex-direction: row;
+}
+
+.form-item {
+    margin-bottom: 30px;
+    padding-right: 10pt;
+}
+
+.warning {
+    font-size: 9pt;
+    color: red;
+    text-align: center; /* 横向居中警告信息 */
+    width: 30%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* 横向居中 */
+    margin-bottom: 20px;
+}
+
+.image {
+    width: 80%; /* 缩放至80% */
+    object-fit: contain; /* 无损缩放 */
+    height: 90pt;
+}
+
+.input-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* 左对齐 */
+}
