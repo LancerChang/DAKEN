@@ -11,24 +11,21 @@
 import { ref } from 'vue';
 import axios from 'axios';
 import { useUserStore } from '@/stores/userstorage';
-import { useRouter } from 'vue-router';
 
 const userStore = useUserStore();
-const router = useRouter();
 const newPassword = ref('');
 const confirmPassword = ref('');
 
+// 在这里打印 userStore 的内容
+console.log('当前用户信息:', userStore);
+
 const resetPassword = async () => {
   try {
-    const userId = userStore.userId; // 确保获取用户ID
-    console.log('用户ID:', userId);
+    const userId = userStore.id; // 确保获取用户ID
+    console.log('用户ID:', userId); // 打印用户ID进行调试
+
     if (!userId) {
       throw new Error('用户ID未定义');
-    }
-
-    if (!newPassword.value || !confirmPassword.value) {
-      alert('密码不能为空');
-      return;
     }
 
     if (newPassword.value !== confirmPassword.value) {
@@ -42,8 +39,6 @@ const resetPassword = async () => {
 
     if (response.data.success) {
       alert('密码重置成功');
-      userStore.logout();
-      router.push('/login'); // 重定向到登录页面
     } else {
       throw new Error(response.data.error || '未知错误');
     }

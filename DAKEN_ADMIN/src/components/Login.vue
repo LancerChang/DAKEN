@@ -1,6 +1,4 @@
 <template>
-  testtest
-  
   <div class="login-overlay">
     <div class="login">
       <t-input v-model="phoneNumber" placeholder="手机号" />
@@ -40,9 +38,11 @@ const login = async () => {
       userStore.setLoggedIn(true);
       userStore.setUserType(user_type); // 设置 userType
 
+      // 获取并设置权限数据
       const permissionsResponse = await axios.get(`http://localhost:5005/user/${user_id}/permissions`, {
         headers: { Authorization: `Bearer ${token}` }
       });
+      console.log('Fetched permissions for user:', permissionsResponse.data.permissions);
       userStore.setPermissions(permissionsResponse.data.permissions);
 
       router.push('/');

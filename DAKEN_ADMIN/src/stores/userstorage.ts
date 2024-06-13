@@ -4,7 +4,7 @@ import { ref } from 'vue';
 export const useUserStore = defineStore('user', () => {
   const permissions = ref([]);
   const isLoggedIn = ref(false);
-  const userType = ref(''); // 添加 userType
+  const userType = ref('');
   const companyName = ref('');
 
   const setPermissions = (newPermissions) => {
@@ -26,8 +26,9 @@ export const useUserStore = defineStore('user', () => {
   const logout = () => {
     permissions.value = [];
     isLoggedIn.value = false;
-    userType.value = ''; // 退出登录时重置 userType
+    userType.value = '';
     companyName.value = '';
+    localStorage.removeItem('token');
   };
 
   return {
@@ -39,6 +40,6 @@ export const useUserStore = defineStore('user', () => {
     setLoggedIn,
     setUserType,
     setCompanyName,
-    logout
+    logout,
   };
 });
